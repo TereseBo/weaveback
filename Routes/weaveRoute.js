@@ -1,11 +1,13 @@
 const express=require('express')
 const weaveRoute=express.Router()
 
-weaveRoute.get('/',(req,res)=>{
+//functions
+const write=require('../controllers/weaveRoute/write')
+
+
+weaveRoute.get('/',(req,res)=>{//Return all drafts?
     res.send('Weave Route')
 })
-weaveRoute.post('/',(req,res)=>{
-    res.send('Weave Route')
-})
+weaveRoute.post('/',write) //save draft to json-file
 
 module.exports=weaveRoute
