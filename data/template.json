@@ -20,5 +20,10 @@
             "pattern_repeat": "nr"
         }
     },
+    "tieup": {
+        
+        "pattern": []
+
+    },
     "threads":"nr"
 }

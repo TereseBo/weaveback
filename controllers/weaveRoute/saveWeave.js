@@ -2,7 +2,7 @@ const fs = require('fs')
 //TODO: Add validation of body
 //TODO: Add middleware to check if file exists
 
-function write(req, res) {
+function saveWeave(req, res) {
     const fileName = req.body.fileName
     const data = JSON.stringify(req.body.weave)
     const path = process.env.DATA_PATH + fileName + '.json'
@@ -12,10 +12,10 @@ function write(req, res) {
             res.status(500).send('Error writing file')
         }
         else {
-            res.status(200).send('File written')
+            res.status(200).send('File saved successfully')
         }
     })
 
 }
 
-module.exports = write
+module.exports = saveWeave
