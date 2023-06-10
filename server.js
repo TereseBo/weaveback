@@ -9,6 +9,4 @@ server.use(express.json())
 
 server.use('/weave',weaveRoute)
 
-server.listen(process.env.PORT,()=>{
-    console.log(`Server is running on port ${process.env.PORT}`)
-})
+exports.server=server
