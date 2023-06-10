@@ -1,5 +1,4 @@
 const { MongoClient } = require("mongodb");
-const dotenv = require("dotenv").config();
 
 class MongoDB {
   //connection url
@@ -38,4 +37,4 @@ class MongoDB {
   }
 }
 
-exports.db = new MongoDB();
+module.exports = new MongoDB();
